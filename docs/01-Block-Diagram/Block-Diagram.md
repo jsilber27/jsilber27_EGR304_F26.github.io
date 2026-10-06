@@ -6,19 +6,10 @@ tags:
 ---
 
 ## Overview
-This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...
+This Block Diagram shows the lighting sensor of Team BAMF's plant monitor system. It uses a lighting sensor to determine whether or not the plant is recieving enough light, and then communicates with a teammate's board to move a shade to increase or decrease the light level.
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
+The Block Diagram shows the important wiring of components to the microcontroller, as well as the microcontroller peripherals, to document the necessary details of the system for communication and replication purposes.
 
+## Block Diagram 
 
-## Example Block Diagram 
-Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
-
-![Example of Indivial Block diagram ](individual-block-diagram.png)
+![Example of Indivial Block diagram ](Silber-Block-Diagram.png)
