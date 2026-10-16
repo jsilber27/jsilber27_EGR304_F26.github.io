@@ -971,6 +971,104 @@
 </ol>
 <p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
 <p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
+<p><strong>Light Sensor</strong></p>
+<ol>
+<li>
+<p>PDV-P8103 surface mount photoresistor</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<ul>
+<li>$0.72/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/advanced-photonix/PDV-P8103/480610?s=N4IgTCBcDaIAoBEBqBaOAOAjABgMwgF0BfIA">PDV-P8103</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low unit cost</td>
+<td>Moderate resistance range may provide less sensitivity in very dim conditions</td>
+</tr>
+<tr>
+<td>Documented rise and fall times for ease of calibration</td>
+<td>Its sensitivity only lists typical, making it hard to estimate variance (min and max)</td>
+</tr>
+<tr>
+<td>Resistance range of 16–33 kΩ at 10 lux is suitable for a voltage-divider circuit</td>
+<td>Slow response makes it unsuitable for tracking rapid light changes</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>BPW34S-ND surface mount photodiode</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<ul>
+<li>$2.11/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/BPW34S/4071244">BPW34S</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fast response makes it suitable for detecting rapid changes in light</td>
+<td>Its output is current, requiring a resistor or transimpedance amplifier to produce a useful analog voltage</td>
+</tr>
+<tr>
+<td>Wide viewing angle helps capture light from different directions</td>
+<td>Near-infrared response means its output won't directly give plant-usable data without suitable filtering and calibration</td>
+</tr>
+<tr>
+<td>Detects visible light as well as near-infrared radiation, making it versatile for optical sensing</td>
+<td>Can be especially sensitive to placement</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>QSD123 surface mount phototransistor</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<ul>
+<li>$2.11/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/onsemi/QSD123/187443">QSD123</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Transistor action amplifies the light-generated signal</td>
+<td>It is optimized for near-infrared light, not the visible spectrum used to assess typical plant lighting</td>
+</tr>
+<tr>
+<td>Its typical rise and fall times are around 7 μs, much faster than an LDR</td>
+<td>Doesn’t require amplifying circuit as per requirements</td>
+</tr>
+<tr>
+<td>Its narrow reception angle can help measure light from a specific direction</td>
+<td>Its output depends on the infrared spectrum, geometry, and circuit design so must be designed especially carefully</td>
+</tr>
+<tr>
+<td><strong>Choice:</strong> PDV-P8103 surface mount photoresistor</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><strong>Rationale:</strong> The PDV-P8103 is the best choice for our plant monitor because it is inexpensive, has a practical resistance range, and has documented response-time specifications. These characteristics allow us to detect changes in light intensity and compare the readings with thresholds based on the plant’s lighting requirements. Additionally, its variable resistance can be easily converted into an analog voltage using a simple voltage divider, allowing the sensor to interface directly with a microcontroller’s analog input. It is also the simplest to implement while following course guidelines. </p>
 
 
 
