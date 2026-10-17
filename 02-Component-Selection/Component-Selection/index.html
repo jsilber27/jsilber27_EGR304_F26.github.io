@@ -575,6 +575,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -842,6 +851,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#sensor" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensor
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -971,11 +989,12 @@
 </ol>
 <p><strong>Choice:</strong> Option 2: CTX936TR-ND surface mount oscillator</p>
 <p><strong>Rationale:</strong> A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.</p>
+<h3 id="sensor">Sensor</h3>
 <p><strong>Light Sensor</strong></p>
 <ol>
 <li>
 <p>PDV-P8103 surface mount photoresistor</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../PDV-P8103.png" data-desc-position="bottom"><img alt="" src="../PDV-P8103.png"></a></p>
 <ul>
 <li>$0.72/each</li>
 <li><a href="https://www.digikey.com/en/products/detail/advanced-photonix/PDV-P8103/480610?s=N4IgTCBcDaIAoBEBqBaOAOAjABgMwgF0BfIA">PDV-P8103</a></li>
@@ -1005,7 +1024,7 @@
 </li>
 <li>
 <p>BPW34S-ND surface mount photodiode</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../BPW34S.png" data-desc-position="bottom"><img alt="" src="../BPW34S.png"></a></p>
 <ul>
 <li>$2.11/each</li>
 <li><a href="https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/BPW34S/4071244">BPW34S</a></li>
@@ -1035,7 +1054,7 @@
 </li>
 <li>
 <p>QSD123 surface mount phototransistor</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../image1.png" data-desc-position="bottom"><img alt="" src="../image1.png"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../QSD123.png" data-desc-position="bottom"><img alt="" src="../QSD123.png"></a></p>
 <ul>
 <li>$2.11/each</li>
 <li><a href="https://www.digikey.com/en/products/detail/onsemi/QSD123/187443">QSD123</a></li>
@@ -1060,14 +1079,11 @@
 <td>Its narrow reception angle can help measure light from a specific direction</td>
 <td>Its output depends on the infrared spectrum, geometry, and circuit design so must be designed especially carefully</td>
 </tr>
-<tr>
-<td><strong>Choice:</strong> PDV-P8103 surface mount photoresistor</td>
-<td></td>
-</tr>
 </tbody>
 </table>
 </li>
 </ol>
+<p><strong>Choice:</strong> PDV-P8103 surface mount photoresistor</p>
 <p><strong>Rationale:</strong> The PDV-P8103 is the best choice for our plant monitor because it is inexpensive, has a practical resistance range, and has documented response-time specifications. These characteristics allow us to detect changes in light intensity and compare the readings with thresholds based on the plant’s lighting requirements. Additionally, its variable resistance can be easily converted into an analog voltage using a simple voltage divider, allowing the sensor to interface directly with a microcontroller’s analog input. It is also the simplest to implement while following course guidelines. </p>
 
 
