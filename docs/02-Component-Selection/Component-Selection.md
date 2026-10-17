@@ -150,3 +150,49 @@ title: Component Selection Example
 
 **Rationale:** The MCP6004-I/P is the best choice because it provides four operational amplifiers in one package while consuming relatively little power. This is particularly important for our design because it allows us to amplify multiple sensor signals without needing several separate ICs. Its rail-to-rail input and output and compatibility with common 3.3 V and 5 V supplies also make it easier to interface with our embedded system. While it has a lower bandwidth than the TLV272IP and TL974IN, its 1 MHz bandwidth should be sufficient for our low-frequency sensor signals. Additionally, while all three options are compelling, the MCP6004-I/P is the cheapest and therefore more budget-friendly.
 
+## Power Regulation
+**Voltage Regulators**
+
+1. NJM7805FA through hole Linear Voltage Regulator
+
+    ![](NJM7805FA.png)
+
+    * $1.85/each
+    * [NJM7805FA](https://www.digikey.com/en/products/detail/nisshinbo-micro-devices-inc/NJM7805FA/805763)
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Fully insulated TO-220F package for electrical isolation                               | Maximum operating temperature is 85°C |
+    | Specified ripple rejection of 78 dB at 120 Hz allows for better stability                      | Insulated package interferes with heatsink capabilities                                        |
+    | Over Temperature, Short Circuit protection | More expensive than L7805ABV-DG |
+
+1. L7805ABV-DG through hole Linear Voltage Regulator
+
+    ![](L7805ABV-DG.png)
+
+    * $1.53/each
+    * [L7805ABV-DG](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805ABV-DG/3945936)
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Low cost compared with the MIC29151                             | Requires approximately 7 V or more input to maintain 5 V output under typical full-load conditions |
+    | Supports input voltages up to 35 V                      | Greater voltage drop creates more heat when the input voltage is much higher than 5 V                                  |
+    | Built-in thermal shutdown, current limiting, and safe-operating-area protection | No enable pin for controlling the regulator through logic |
+
+1. MIC29151-5.0WT through hole Linear Voltage Regulator
+
+    ![](MIC29151-5.0WT.png)
+
+    * $4.96/each
+    * [MIC29151-5.0WT](https://www.digikey.com/en/products/detail/microchip-technology/MIC29151-5-0WT/771578)
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Low dropout voltage (600 mV maximum at 1.5 A) allows operation with an input closer to 5 V                               | More expensive than traditional 7805 regulators |
+    | Built-in reverse-polarity, overcurrent, and overtemperature protection improve circuit safety                      | Five-pin package requires more connections than a standard three-pin regulator                                  |
+    | Enable pin allows the microcontroller or other logic to turn the regulator on and off | Maximum input voltage is 26 V, lower than the 35 V rating of the other two options |
+
+**Choice:** L7805ABV-DG through hole Linear Voltage Regulator
+
+**Rationale:** The L7805ABV-DG is the best choice because it provides a reliable 5 V output at a low cost and includes built-in thermal shutdown and current limiting. This is particularly important for our plant monitor because it needs a stable power supply for the microcontroller and sensor circuits without adding unnecessary cost or complexity. Although the NJM7805FA offers similar protection features, it is more expensive and does not provide a significant advantage for our design. The MIC29151-5.0WT has a lower dropout voltage and an enable pin, but these features are not essential if our wall adapter provides sufficient input voltage. Therefore, it offers the best balance of cost, simplicity, and performance for our project.
+
