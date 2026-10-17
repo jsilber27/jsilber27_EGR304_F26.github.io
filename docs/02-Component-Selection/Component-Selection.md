@@ -57,12 +57,12 @@ title: Component Selection Example
 
 **Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
 
-
+### Sensor
 **Light Sensor**
 
 1. PDV-P8103 surface mount photoresistor
 
-    ![](image1.png)
+    ![](PDV-P8103.png)
 
     * $0.72/each
     * [PDV-P8103](https://www.digikey.com/en/products/detail/advanced-photonix/PDV-P8103/480610?s=N4IgTCBcDaIAoBEBqBaOAOAjABgMwgF0BfIA)
@@ -75,7 +75,8 @@ title: Component Selection Example
 
 1. BPW34S-ND surface mount photodiode
 
-    ![](image1.png)
+    ![](BPW34S.png)
+
 
     * $2.11/each
     * [BPW34S](https://www.digikey.com/en/products/detail/vishay-semiconductor-opto-division/BPW34S/4071244)
@@ -88,7 +89,7 @@ title: Component Selection Example
 
 1. QSD123 surface mount phototransistor
 
-    ![](image1.png)
+    ![](QSD123.png)
 
     * $2.11/each
     * [QSD123](https://www.digikey.com/en/products/detail/onsemi/QSD123/187443)
@@ -98,6 +99,7 @@ title: Component Selection Example
     | Transistor action amplifies the light-generated signal                              | It is optimized for near-infrared light, not the visible spectrum used to assess typical plant lighting |
     | Its typical rise and fall times are around 7 μs, much faster than an LDR                      | Doesn’t require amplifying circuit as per requirements                                        |
     | Its narrow reception angle can help measure light from a specific direction | Its output depends on the infrared spectrum, geometry, and circuit design so must be designed especially carefully |
+
 **Choice:** PDV-P8103 surface mount photoresistor
 
 **Rationale:** The PDV-P8103 is the best choice for our plant monitor because it is inexpensive, has a practical resistance range, and has documented response-time specifications. These characteristics allow us to detect changes in light intensity and compare the readings with thresholds based on the plant’s lighting requirements. Additionally, its variable resistance can be easily converted into an analog voltage using a simple voltage divider, allowing the sensor to interface directly with a microcontroller’s analog input. It is also the simplest to implement while following course guidelines. 
