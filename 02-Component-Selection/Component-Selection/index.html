@@ -589,6 +589,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#amplification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amplification
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -865,6 +874,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#amplification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amplification
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -993,7 +1011,7 @@
 <p><strong>Light Sensor</strong></p>
 <ol>
 <li>
-<p>PDV-P8103 surface mount photoresistor</p>
+<p>PDV-P8103 through hole photoresistor</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../PDV-P8103.png" data-desc-position="bottom"><img alt="" src="../PDV-P8103.png"></a></p>
 <ul>
 <li>$0.72/each</li>
@@ -1023,7 +1041,7 @@
 </table>
 </li>
 <li>
-<p>BPW34S-ND surface mount photodiode</p>
+<p>BPW34S-ND through hole photodiode</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../BPW34S.png" data-desc-position="bottom"><img alt="" src="../BPW34S.png"></a></p>
 <ul>
 <li>$2.11/each</li>
@@ -1053,7 +1071,7 @@
 </table>
 </li>
 <li>
-<p>QSD123 surface mount phototransistor</p>
+<p>QSD123 through hole phototransistor</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../QSD123.png" data-desc-position="bottom"><img alt="" src="../QSD123.png"></a></p>
 <ul>
 <li>$2.11/each</li>
@@ -1083,8 +1101,104 @@
 </table>
 </li>
 </ol>
-<p><strong>Choice:</strong> PDV-P8103 surface mount photoresistor</p>
+<p><strong>Choice:</strong> PDV-P8103 through hole photoresistor</p>
 <p><strong>Rationale:</strong> The PDV-P8103 is the best choice for our plant monitor because it is inexpensive, has a practical resistance range, and has documented response-time specifications. These characteristics allow us to detect changes in light intensity and compare the readings with thresholds based on the plant’s lighting requirements. Additionally, its variable resistance can be easily converted into an analog voltage using a simple voltage divider, allowing the sensor to interface directly with a microcontroller’s analog input. It is also the simplest to implement while following course guidelines. </p>
+<h2 id="amplification">Amplification</h2>
+<p><strong>Op Amp</strong></p>
+<ol>
+<li>
+<p>TLV272IP through hole Op Amp</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../TLV272IP.png" data-desc-position="bottom"><img alt="" src="../TLV272IP.png"></a></p>
+<ul>
+<li>$1.56/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/texas-instruments/TLV272IP/454247">TLV272IP</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>High 3 MHz bandwidth</td>
+<td>Higher power consumption than MCP6004</td>
+</tr>
+<tr>
+<td>Wide 2.7–16 V supply range</td>
+<td>Input is not rail-to-rail</td>
+</tr>
+<tr>
+<td>Multiple channels in one IC</td>
+<td>Less channels than MCP6004-I/P</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>MCP6004-I/P through hole Op Amp</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../MCP6004-IP.png" data-desc-position="bottom"><img alt="" src="../MCP6004-IP.png"></a></p>
+<ul>
+<li>$0.60/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/microchip-technology/MCP6004-I-P/523060">MCP6004-I/P</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Four channels in one IC</td>
+<td>Lower bandwidth (1 MHz) than TLV272IP and TL974IN</td>
+</tr>
+<tr>
+<td>Low power consumption (100 µA/channel)</td>
+<td>Limited to a 6 V maximum supply</td>
+</tr>
+<tr>
+<td>Rail-to-rail input and output; operates from 1.8–6 V</td>
+<td>Slower slew rate (0.6 V/µs) than the other two</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>TL974IN through hole Op Amp</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../TL974IN.png" data-desc-position="bottom"><img alt="" src="../TL974IN.png"></a></p>
+<ul>
+<li>$1.66/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/texas-instruments/TL974IN/1675406">TL974IN</a></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Highest bandwidth (12 MHz)</td>
+<td>Higher power consumption (2 mA/channel)</td>
+</tr>
+<tr>
+<td>Four channels in one IC</td>
+<td>Input is not rail-to-rail</td>
+</tr>
+<tr>
+<td>Low noise and rail-to-rail output</td>
+<td>Maximum supply is 12 V, lower than the TLV272IP's 16 V</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ol>
+<p><strong>Choice:</strong> MCP6004-I/P through hole Op Amp</p>
+<p><strong>Rationale:</strong> The MCP6004-I/P is the best choice because it provides four operational amplifiers in one package while consuming relatively little power. This is particularly important for our design because it allows us to amplify multiple sensor signals without needing several separate ICs. Its rail-to-rail input and output and compatibility with common 3.3 V and 5 V supplies also make it easier to interface with our embedded system. While it has a lower bandwidth than the TLV272IP and TL974IN, its 1 MHz bandwidth should be sufficient for our low-frequency sensor signals. Additionally, while all three options are compelling, the MCP6004-I/P is the cheapest and therefore more budget-friendly.</p>
 
 
 
