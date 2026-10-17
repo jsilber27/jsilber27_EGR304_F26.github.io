@@ -196,3 +196,52 @@ title: Component Selection Example
 
 **Rationale:** The L7805ABV-DG is the best choice because it provides a reliable 5 V output at a low cost and includes built-in thermal shutdown and current limiting. This is particularly important for our plant monitor because it needs a stable power supply for the microcontroller and sensor circuits without adding unnecessary cost or complexity. Although the NJM7805FA offers similar protection features, it is more expensive and does not provide a significant advantage for our design. The MIC29151-5.0WT has a lower dropout voltage and an enable pin, but these features are not essential if our wall adapter provides sufficient input voltage. Therefore, it offers the best balance of cost, simplicity, and performance for our project.
 
+## Power
+**Power Sources**
+
+1. YSV12-1201000-D1J AC to DC Wall Adapter
+
+    ![](YSV12-1201000-D1J.png)
+
+    * $7.95/each
+    * [YSV12-1201000-D1J](https://www.jameco.com/z/YSV12-1201000-D1J-Yingjiao-Interchangeable-AC-Clip-Wall-Power-Adapter-12VDC-1A-with-2-1mm-DC-Plug-AC-Clips-Included-_2735095.html)
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Provides stable, regulated power for continuous monitoring                               | Requires a nearby AC outlet and limits portability |
+    | Can supply up to 12 W          | Costs more initially than the battery holder                                        |
+    | Includes overload, overvoltage, and short-circuit protection | Its 12 V output must be stepped down, adding a regulator and associated circuitry |
+
+1. KXOB25-12X1F-TR Solar Cell
+
+    ![](KXOB25-12X1F-TR.png)
+
+    * $1.53/each
+    * [KXOB25-12X1F-TR](https://www.digikey.com/en/products/detail/anysolar-ltd/KXOB25-12X1F-TR/10127240)
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Uses renewable energy                             | Maximum output is only 24.5 mW, requiring many cells |
+    | Very small and lightweight                      |  Its 0.56 V operating voltage requires boost circuitry                                  |
+    | Suitable for an outdoor monitor exposed to sunlight | Reliable overnight operation requires additional energy storage |
+
+1. 36-2477-ND Battery Holder and E91VP AA Batteries
+
+    ![](36-2477-ND.png)
+    ![](E91VP.png)
+
+    * $1.99/each - Battery Holder
+    * [36-2477-ND](https://www.digikey.com/en/products/detail/keystone-electronics/2477/303822)
+
+     * $0.42/each (at 620 pcs; consistent with retail) - AA Batteries
+    * [E91VP](https://www.digikey.com/en/products/detail/energizer-battery-company/E91VP/14267522)
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Inexpensive holder at $1.99                               | Batteries must be purchased separately and eventually replaced |
+    | Mounts directly to the PCB using through-hole pins                      | Cells provide only about 1.5V each, lower margin to 5V requirement                                  |
+    | Batteries are replaceable, so the monitor can operate without a wall outlet | Battery voltage declines with discharge, and runtime depends on battery capacity and system current |
+
+**Choice:** Yingjiao YSV12-1201000-D1J wall adapter
+
+**Rationale:** The Yingjiao YSV12-1201000-D1J wall adapter is the best choice for our plant monitor because it provides a stable, regulated 12 V DC supply with sufficient current capacity to power the microcontroller, light sensor, and other system components. This is particularly important because the monitor needs consistent power to collect light measurements and compare them against thresholds based on the plant's lighting requirements. Unlike battery-powered alternatives, the wall adapter does not require periodic battery replacement or recharging, making it reliable for continuous indoor operation. It also requires much simpler circuitry compared to the solar cells to connect to the PCB, as well as less components.
