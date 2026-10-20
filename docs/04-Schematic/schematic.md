@@ -4,13 +4,14 @@ title: Schematic
 
 ## Overview
 
-This schematic is design to support .... (highlight functionally, power, and controller).
+This schematic is designed to support Team BAMF's Plant Monitor system by introducing a light sensing circuit to sense the ambient light around the plant and compare it to the necessary light, sending signals to a motor connected to a shade to increase or decrease light amount (depending on what's necessary), and data to a screen letting users know what status the plant's lighting is in (good/bad). 
+
+It does so by using a photoresistor to detect light as an impedance, which then is amplified by an op-amp to generate a complete signal as a voltage. This voltage is communicated to the PIC18F57Q43 Curiosity Nano micrcontroller for ADC to DAC processing, finally being sent as an analog signal to the motor on another board and UART data to the screen on another board. The whole system is powered by a wall adapter connected to a barrel jack, regualted by a linear voltage regulator outputing 5V.
+
+![schematic](JS_Subsystem_Design.png){style width:"350" height:"300;"}
+**Figure 1:** Team BAMF Light Sensor schematic.
 
 
-![schematic](Screenshot.png){style width:"350" height:"300;"}
-**Figure ##:** Showing a example schematic.
+## Resources
 
-
-## Resouces
-
-The schematic as a PDF download is available [*here*](ExampleSchematic.pdf), and the Zip folder of the project [*here*](dummyZip.zip).
+The schematic as a PDF download is available [*here*](JS_Subsystem_Design.pdf), and the Zip folder of the project [*here*](JS_Subsystem_Design_schematic.zip).
