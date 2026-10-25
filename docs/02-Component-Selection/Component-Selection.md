@@ -148,7 +148,7 @@ title: Component Selection
 
     ![](YSV12-1201000-D1J.png)
 
-    * $7.95/each
+    * $11.95/each
     * [YS39-2402500-D1J](https://www.jameco.com/z/YS39-2402500-D1J-Yingjiao-Switching-AC-DC-Wall-Adapter-24-VDC-2-5A-2-1mm-DC-Plug_2734919.html)
 
     | Pros                                      | Cons                                                             |
