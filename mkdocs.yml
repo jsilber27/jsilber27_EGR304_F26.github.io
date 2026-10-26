@@ -41,13 +41,13 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 draft_docs: |
-  **/*_unpublished.md
-  **/*_draft.md
-  **/*_draft**
+ # **/*_unpublished.md
+ # **/*_draft.md
+ # **/*_draft**
   
 plugins:
   - search
-  # - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
+  - glightbox # allow resize images, see https://squidfunk.github.io/mkdocs-material/reference/images/
 
 extra_css:
   - stylesheets/extra.css  
