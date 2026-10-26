@@ -10,7 +10,7 @@ It does so by using a photoresistor to detect light as an impedance, which then 
 
 **NOTE:** Github is currently not displaying images, so let this note be a placeholder until image display returns. PDF of image is submitted to Canvas.
 
-![schematic](JS_Subsystem_Design.png){style width:"350" height:"300;"}
+![schematic](JS_Subsystem_Design.png)
 **Figure 1:** Team BAMF Light Sensor schematic.
 
 
