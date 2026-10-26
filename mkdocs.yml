@@ -41,9 +41,9 @@ markdown_extensions:
           format: !!python/name:pymdownx.superfences.fence_code_format
 
 draft_docs: |
-  **/*_unpublished.md
-  **/*_draft.md
-  **/*_draft**
+ # **/*_unpublished.md
+ #  **/*_draft.md
+ #  **/*_draft**
   
 plugins:
   - search
