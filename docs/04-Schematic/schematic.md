@@ -13,6 +13,7 @@ It does so by using a photoresistor to detect light as an impedance, which then 
 
 **NOTE:** *Every resistor is rated for 1/4 W, every capacitor is rated for 50 V, and the fuse is rated for 2.25 A. Power budget can be found [here](https://jsilber27.github.io/jsilber27_EGR304_F26.github.io/05-Power-Budget/Power-Budget/)*
 
+
 ## Resources
 
 The schematic as a PDF download is available [*here*](JS_Subsystem_Design.pdf), and the Zip folder of the project [*here*](JS_Subsystem_Design_schematic.zip).
