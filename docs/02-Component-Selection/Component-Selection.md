@@ -146,16 +146,16 @@ title: Component Selection
 
 1. YS39-2402500-D1J AC to DC Wall Adapter
 
-    ![](YSV12-1201000-D1J.png)
+    ![](NGE30U12-P1J.png)
 
-    * $11.95/each
-    * [YS39-2402500-D1J](https://www.jameco.com/z/YS39-2402500-D1J-Yingjiao-Switching-AC-DC-Wall-Adapter-24-VDC-2-5A-2-1mm-DC-Plug_2734919.html)
+    * $15.20/each
+    * [NGE30U12-P1J](https://www.jameco.com/z/NGE30U12-P1J-MEAN-WELL-Wall-Mount-Green-Adapter-12VDC-2-50A-30W-2-1mm-Plug-with-Foldable-NEMA-1-15P_2403287.html)
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
     | Provides stable, regulated power for continuous monitoring                               | Requires a nearby AC outlet and limits portability |
-    | Can supply up to 60 W          | Costs more initially than the battery holder                                        |
-    | Includes overload, overvoltage, and short-circuit protection | Its 24 V output must be stepped down, adding a regulator and associated circuitry |
+    | Can supply up to 30 W          | Costs more initially than the battery holder                                        |
+    | Includes overload, overvoltage, and short-circuit protection | Its 12 V output must be stepped down, adding a regulator and associated circuitry |
 
 1. KXOB25-12X1F-TR Solar Cell
 
@@ -187,6 +187,6 @@ title: Component Selection
     | Mounts directly to the PCB using through-hole pins                      | Cells provide only about 1.5V each, lower margin to 5V requirement                                  |
     | Batteries are replaceable, so the monitor can operate without a wall outlet | Battery voltage declines with discharge, and runtime depends on battery capacity and system current |
 
-**Choice:** Yingjiao YS39-2402500-D1J wall adapter
+**Choice:** MEAN WELL NGE30U12-P1J wall adapter
 
-**Rationale:** The Yingjiao YS39-2402500-D1J wall adapter is the best choice for our plant monitor because it provides a stable, regulated 24 V DC supply with sufficient current capacity to power the microcontroller, light sensor, and other system components. This is particularly important because the monitor needs consistent power to collect light measurements and compare them against thresholds based on the plant's lighting requirements. Unlike battery-powered alternatives, the wall adapter does not require periodic battery replacement or recharging, making it reliable for continuous indoor operation. It also requires much simpler circuitry compared to the solar cells to connect to the PCB, as well as less components.
+**Rationale:** The MEAN WELL NGE30U12-P1J wall adapter is the best choice for our plant monitor because it provides a stable, regulated 12 V DC supply with sufficient current capacity to power the microcontroller, light sensor, and other system components. This is particularly important because the monitor needs consistent power to collect light measurements and compare them against thresholds based on the plant's lighting requirements. Unlike battery-powered alternatives, the wall adapter does not require periodic battery replacement or recharging, making it reliable for continuous indoor operation. It also requires much simpler circuitry compared to the solar cells to connect to the PCB, as well as less components.
