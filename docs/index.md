@@ -11,7 +11,7 @@ as part of<br>
 for<br>
 <font size= "5"> Team 205 </font><br>
 
-**Submission: October, 26, 2026**
+**Submission: October, 30, 2026**
 </center>
 
 ## Introduction
@@ -24,7 +24,7 @@ This light sensor unit is useful in determining the amount of light a plant reci
 
 This sensor uses a photoresistor to detect the amount of light as an impedance, and using an op-amp stage to amplify the signal to the proper voltage. This signal is then filtered for unwanted noise, and passed on to the next boards in the system.
 
- For the complete design, refer to [team report.](https://asu-egr304-2026-f.github.io/)
+ For the complete design, refer to [team report.](https://asu-egr304-2026-f.github.io/ASU-EGR304-205-2026-F.github.io/)
 
 
 ### My Contribution

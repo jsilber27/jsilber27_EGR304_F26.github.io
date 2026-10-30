@@ -8,6 +8,7 @@ A power budget is necessary to ensure that the power source and voltage regulato
 First, all major components and their maximum current requirements were identified using their datasheets. Next, the components were assigned to appropriate voltage rails, and their current requirements were totaled with an additional 25% safety margin. Then, suitable voltage regulators and an external power source were selected to meet the system's power requirements. Finally, the available current was checked to ensure the power source could support all components, and the expected battery life was calculated if applicable.
 
 ![budget](PowerBudget.png)
+**Figure 4:** Team BAMF Light Sensor Power Budget
 
 ## Conclusions
 

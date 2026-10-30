@@ -8,7 +8,7 @@ tags:
 ## Overview
 written context
 
-## Bill of Materials Example (as Table)
+<!-- ## Bill of Materials Example (as Table)
 
 *Table ##: An example of one approach to adding your BOM table to this section.*
 
@@ -19,10 +19,11 @@ written context
 
 Note: Setting it up as a table is nice because it is completely viewable without scaling issues. <ins>Downside</ins> is that you have to do the math.
 
-* You could also import your BOM via a screenshot of the spreadsheet created BOM
+* You could also import your BOM via a screenshot of the spreadsheet created BOM -->
 
-## Bill of Materials Example (as Image)
-![](BOM-Screenshot.png){style width: "2000"}
-**Figure 2:** Example Bill of Materials as a screenshot.
+## Bill of Materials
+![](BOM.png){style width: "2000"}
+**Figure 2:** Team BAMF Light Sensor Bill of Materials
 
-As you can see, the text can be difficult to read without opening the image.
+## Resources
+The BOM as a PDF download is available [*here*](BOM.pdf), and a Microsoft Excel Sheet [*here*](BOM.xlsx).

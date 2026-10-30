@@ -13,6 +13,7 @@ The Block Diagram shows the important wiring of components to the microcontrolle
 ## Block Diagram 
 
 ![Indivial Block diagram ](Individual_Block_Diagram.png)
+**Figure 1:** Team BAMF Light Sensor Block Diagram
 
 **draw.io source files:**
 [draw.io Diagram](https://drive.google.com/file/d/1gqsW3VtbBbesCohOz1VJ5nsW4sPXPc0J/view?usp=sharing)
