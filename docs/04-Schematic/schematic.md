@@ -6,7 +6,7 @@ title: Schematic
 
 This schematic is designed to support Team BAMF's Plant Monitor system by introducing a light sensing circuit to sense the ambient light around the plant and compare it to the necessary light, sending signals to a motor connected to a shade to increase or decrease light amount (depending on what's necessary). 
 
-It does so by using a photoresistor to detect light as an impedance, which then is amplified by an op-amp to generate a complete signal as a voltage. This voltage is communicated to the PIC18F57Q43 Curiosity Nano micrcontroller for ADC to DAC processing, finally being sent as an analog signal to the motor on another board (shown in the schematic). The whole system is powered by a wall adapter connected to a barrel jack, regualted by a linear voltage regulator outputing 5V.
+It does so by using a photoresistor to detect light as an impedance, which then is amplified by an op-amp to generate a complete signal as a voltage. This voltage is communicated to the PIC18F57Q43 Curiosity Nano micrcontroller for ADC to DAC processing, finally being sent as a signal to the motor on another board (shown in the schematic). The whole system is powered by a wall adapter connected to a barrel jack, regualted by a linear voltage regulator outputing 5V.
 
 ![schematic](JS_Subsystem_Design.png)
 **Figure 3:** Team BAMF Light Sensor schematic.
