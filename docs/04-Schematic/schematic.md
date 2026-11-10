@@ -16,4 +16,4 @@ It does so by using a photoresistor to detect light as an impedance, which then 
 
 ## Resources
 
-The schematic as a PDF download is available [*here*](JS_Subsystem_Design.pdf), and the Zip folder of the project [*here*](JS_Subsystem_Design_schematic.zip).
+The schematic as a PDF download is available [*here*](JS_Subsystem_Design.pdf).

@@ -4,12 +4,13 @@ title: PCB
 
 ## Overview
 
-This PCB is designed to support the schematic section of this datasheet.
+This PCB is designed to support the schematic section of this datasheet, along with the Gerber files.
 
-![schematic](JS_Subsystem_Design.png)
+![PCB top](JS_Subsystem_PCB_top.png)
+![PCB bottom](JS_Subsystem_PCB_bottom.png)
 **Figure 6:** Team BAMF Light Sensor PCB.
 
 
 ## Resources
 
-The schematic as a PDF download is available [*here*](JS_Subsystem_Design.pdf), and the Zip folder of the project [*here*](JS_Subsystem_Design_schematic.zip).
+The PCB as a PDF download is available [*here*](JS_PCB.pdf), and the Zip folder of the project [*here*](JS_Subsystem_Design.zip). The Zip folder of the associated Gerber files is available [*here*](Gerber.zip).
